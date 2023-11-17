@@ -95,29 +95,25 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  	  //Prva sekvenca zavisi od slova u imenu, stoga (Arsenije = 8)--> 8 ms trajanja
-	  	  //Istom logikom ali za prezime, (Jokic = 5)--> 5 ms pauze
+  	  //Prva sekvenca zavisi od slova u imenu, stoga (Arsenije = 8)--> 8 ms trajanja
+  	  //Istom logikom ali za prezime, (Jokic = 5)--> 5 ms pauze
 
-	  	  for (int i = 0; i < 8; i++){
-	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-	  		  HAL_Delay(800); //8 ms trajanja
-	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
-	  		  HAL_Delay(500); //5 ms pauze
-	  	  }
+  	  for (int i = 0; i < 8; i++){
+  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+  		  HAL_Delay(8); //8 ms trajanja
+  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+  		  HAL_Delay(5); //5 ms pauze
+  	  }
 
-	  	  //Druga sekvenca, isti princip samo obrnuto trajanje i pauza
-	  	  //Dakle 5 ms trajanja a 8 ms pauze
+  	  //Druga sekvenca, isti princip samo obrnuto trajanje i pauza
+  	  //Dakle 5 ms trajanja a 8 ms pauze
 
-	  	  for (int i = 0; i < 5; i++){
-	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-	  		  HAL_Delay(500); //5 ms trajanja
-	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
-	  		  HAL_Delay(800); //8 ms pauze
-	  	  }
-
-
-
-
+  	  for (int i = 0; i < 5; i++){
+  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+  		  HAL_Delay(5); //5 ms trajanja
+  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+  		  HAL_Delay(8); //8 ms pauze
+  	  }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
