@@ -1,0 +1,27 @@
+Potrebno je realizovati takvo kolo koje će kontrolisati paljenje tj. gašenje LED.
+
+Port se bira tako što se posmatra broj samoglasnika tj. suglasnika u imenu odnosno prezimenu,
+te se u odnosu na isti uzima Port A(više samoglasnika) tj. Port B(više suglasnika).
+
+Arsenije Jokić ---> 6 samoglasnika, 7 suglasnika ---> Port B.
+
+Kada se završi izbor Port-a, prelazi se na izbor odgovarajućeg pin-a.
+
+Pin se bira tako što se posmatra broj slova u imenu i prezimenu po modulu 6.
+
+Arsenije Jokić ---> 13 % 6 = 1 ---> Pin B1.
+
+Radi se PWM simulacija.
+
+U pitanju su dva takta, takvi da je:
+
+PRVI TAKT
+
+Širina impulsa jednaka broju slova u imenu predstavljenim u ms ---> 10ms.
+Širina pauze prvog takta je broj slova u prezimenu ---> 5ms.
+
+DRUGI TAKT
+
+Radi se isto kao i prvi samo što je odredjivanje impulsa i pauze zarotirano.
+
+S tim u vezi, širina impulsa je 5ms a širina pauze 10ms.
